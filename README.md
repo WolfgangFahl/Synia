@@ -58,7 +58,9 @@ There are currently **173 Wikidata:Synia template pages** available:
 - **112 index pages** (e.g., `#author-index`)
 - **11 two-entity relationship views** (e.g., `#author/Q42/topic/Q11660`)
 
-[Browse all 173 Synia templates on Wikidata](https://www.wikidata.org/w/index.php?title=Special:PrefixIndex&prefix=Synia%3A&namespace=4)
+**Resources:**
+- [Wikidata:Synia](https://www.wikidata.org/wiki/Wikidata:Synia) - Official project page with examples and userscripts
+- [Browse all 173 Synia templates](https://www.wikidata.org/w/index.php?title=Special:PrefixIndex&prefix=Synia%3A&namespace=4)
 
 ## Usage Examples
 

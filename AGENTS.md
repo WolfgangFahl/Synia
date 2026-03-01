@@ -243,7 +243,9 @@ There are currently **173 Wikidata:Synia templates** organized into categories:
 - **112 index pages** - Browse collections of entities  
 - **11 two-entity relationship views** - Explore connections
 
-[Browse all templates on Wikidata](https://www.wikidata.org/w/index.php?title=Special:PrefixIndex&prefix=Synia%3A&namespace=4)
+**Resources:**
+- [Wikidata:Synia](https://www.wikidata.org/wiki/Wikidata:Synia) - Official project page with documentation, examples, and userscripts
+- [Browse all templates](https://www.wikidata.org/w/index.php?title=Special:PrefixIndex&prefix=Synia%3A&namespace=4) - Complete template listing
 
 ### Template Categories
 
