@@ -1,0 +1,88 @@
+#!/bin/bash
+#
+# getlibs - Fetch JavaScript libraries from the Synia toolforge deployment
+#
+# This script downloads all the required third-party libraries from the
+# original Synia deployment at toolforge.org
+#
+
+set -e  # Exit on error
+
+# Colors for output
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+
+# Base URL
+BASE_URL="https://synia.toolforge.org"
+
+# Create lib directories
+echo -e "${BLUE}Creating library directories...${NC}"
+mkdir -p libs/jquery
+mkdir -p libs/bootstrap/css
+mkdir -p libs/bootstrap/js
+mkdir -p libs/datatables/i18n
+
+# Function to download a file
+download_file() {
+    local url="$1"
+    local output="$2"
+    
+    echo -e "${BLUE}Downloading: ${output}${NC}"
+    if curl -sSL -f "$url" -o "$output"; then
+        echo -e "${GREEN}✓ Successfully downloaded: ${output}${NC}"
+    else
+        echo -e "${RED}✗ Failed to download: ${url}${NC}"
+        return 1
+    fi
+}
+
+echo ""
+echo "======================================"
+echo "  Synia Library Download Script"
+echo "======================================"
+echo ""
+
+# Download jQuery
+echo -e "${BLUE}[1/6] Downloading jQuery...${NC}"
+download_file "$BASE_URL/libs/jquery/jquery-3.6.4.min.js" "libs/jquery/jquery-3.6.4.min.js"
+
+# Download Bootstrap CSS
+echo ""
+echo -e "${BLUE}[2/6] Downloading Bootstrap CSS...${NC}"
+download_file "$BASE_URL/libs/bootstrap/css/bootstrap.min.css" "libs/bootstrap/css/bootstrap.min.css"
+
+# Download Bootstrap JS
+echo ""
+echo -e "${BLUE}[3/6] Downloading Bootstrap JS...${NC}"
+download_file "$BASE_URL/libs/bootstrap/js/bootstrap.bundle.min.js" "libs/bootstrap/js/bootstrap.bundle.min.js"
+
+# Download DataTables CSS
+echo ""
+echo -e "${BLUE}[4/6] Downloading DataTables CSS...${NC}"
+download_file "$BASE_URL/libs/datatables/jquery.dataTables.min.css" "libs/datatables/jquery.dataTables.min.css"
+
+# Download DataTables JS
+echo ""
+echo -e "${BLUE}[5/6] Downloading DataTables JS...${NC}"
+download_file "$BASE_URL/libs/datatables/jquery.dataTables.min.js" "libs/datatables/jquery.dataTables.min.js"
+
+# Download DataTables i18n files
+echo ""
+echo -e "${BLUE}[6/6] Downloading DataTables i18n files...${NC}"
+download_file "$BASE_URL/libs/datatables/i18n/da.json" "libs/datatables/i18n/da.json" || true
+download_file "$BASE_URL/libs/datatables/i18n/de-DE.json" "libs/datatables/i18n/de-DE.json" || true
+
+echo ""
+echo "======================================"
+echo -e "${GREEN}✓ Library download complete!${NC}"
+echo "======================================"
+echo ""
+echo "All libraries have been downloaded to the libs/ directory."
+echo ""
+echo "You can now run the application with:"
+echo "  python3 -m http.server 8000"
+echo ""
+echo "Then open: http://localhost:8000"
+echo ""

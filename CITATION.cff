@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Scholia, Scientometrics and Wikidata"
+authors:
+  - family-names: Nielsen
+    given-names: Finn Årup
+  - family-names: Mietchen
+    given-names: Daniel
+  - family-names: Willighagen
+    given-names: Egon
+year: 2017
+doi: 10.1007/978-3-319-70407-4_36
+start: 237
+end: 259
+type: conference-paper
