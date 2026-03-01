@@ -26,27 +26,30 @@ First, fetch the required JavaScript libraries:
 bash scripts/getlibs
 ```
 
-### 2. Serve the Application
+### 2. Open in Browser
 
-Since this is a static single-page app, you can serve it with any web server:
+Simply open `index.html` directly in your web browser:
+
+```bash
+# On macOS
+open index.html
+
+# On Linux
+xdg-open index.html
+
+# On Windows
+start index.html
+```
+
+Or just double-click `index.html` in your file manager.
+
+**Note**: A web server is **not required** because Synia queries external APIs (Wikidata) that support CORS. However, if you prefer to use a web server:
 
 ```bash
 # Using Python 3
 python3 -m http.server 8000
-
-# Using Python 2
-python -m SimpleHTTPServer 8000
-
-# Using Node.js (if you have http-server installed)
-npx http-server
-
-# Using PHP
-php -S localhost:8000
+# Then navigate to: http://localhost:8000
 ```
-
-### 3. Open in Browser
-
-Navigate to `http://localhost:8000` in your web browser.
 
 ## Usage Examples
 
