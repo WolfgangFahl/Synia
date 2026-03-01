@@ -218,6 +218,26 @@ Works in all modern browsers that support:
 - POST method for SPARQL queries to prevent URL injection
 - Client-side only execution (no server-side code)
 
+## License
+
+This project is licensed under the GNU General Public License v2.0 - see the [LICENSE](LICENSE) file for details.
+
+## Original Project
+
+This is a redistribution of [Synia](https://github.com/fnielsen/synia) by Finn Årup Nielsen, originally deployed at https://synia.toolforge.org/.
+
+Synia is based on the [Scholia project](https://scholia.toolforge.org/) for Wikidata bibliometrics and scientometrics visualization.
+
+### What's Different in This Repository
+
+This repository adds:
+- **Comprehensive documentation** (README.md, AGENTS.md)
+- **Automated library download script** (scripts/getlibs)
+- **Citation metadata** (CITATION.cff)
+- **Pre-downloaded dependencies** for offline/local use
+
+**The core application code (JavaScript, CSS, HTML) remains unchanged from the original.**
+
 ## Citation
 
 If you use Synia in your research, please cite:
@@ -233,10 +253,6 @@ If you use Synia in your research, please cite:
 ```
 
 See [CITATION.cff](CITATION.cff) for machine-readable citation information.
-
-## License
-
-Based on the Scholia project for Wikidata bibliometrics and scientometrics visualization.
 
 ## Related Projects
 
