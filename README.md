@@ -51,25 +51,57 @@ python3 -m http.server 8000
 # Then navigate to: http://localhost:8000
 ```
 
+## Available Templates
+
+There are currently **173 Wikidata:Synia template pages** available:
+- **50 single-entity views** (e.g., `#author/Q42`)
+- **112 index pages** (e.g., `#author-index`)
+- **11 two-entity relationship views** (e.g., `#author/Q42/topic/Q11660`)
+
+[Browse all 173 Synia templates on Wikidata](https://www.wikidata.org/w/index.php?title=Special:PrefixIndex&prefix=Synia%3A&namespace=4)
+
 ## Usage Examples
 
-### Viewing an Entity
+### Popular Single-Entity Views
 
 Navigate to a specific aspect and entity:
-- `#author/Q42` - View Douglas Adams as an author
-- `#venue/Q5412157` - View a publication venue
-- `#organization/Q95` - View Google as an organization
 
-### Viewing Indexes
+- **Author**: [Douglas Adams](https://synia.toolforge.org/#author/Q42) - `#author/Q42`
+  - Template: [Wikidata:Synia:author](https://www.wikidata.org/wiki/Wikidata:Synia:author)
+- **Venue**: [Nature journal](https://synia.toolforge.org/#venue/Q180445) - `#venue/Q180445`
+  - Template: [Wikidata:Synia:venue](https://www.wikidata.org/wiki/Wikidata:Synia:venue)
+- **Organization**: [Google](https://synia.toolforge.org/#organization/Q95) - `#organization/Q95`
+  - Template: [Wikidata:Synia:organization](https://www.wikidata.org/wiki/Wikidata:Synia:organization)
+- **Topic**: [Artificial Intelligence](https://synia.toolforge.org/#topic/Q11660) - `#topic/Q11660`
+  - Template: [Wikidata:Synia:topic](https://www.wikidata.org/wiki/Wikidata:Synia:topic)
+- **Work**: [The Hitchhiker's Guide to the Galaxy](https://synia.toolforge.org/#work/Q25169) - `#work/Q25169`
+  - Template: [Wikidata:Synia:work](https://www.wikidata.org/wiki/Wikidata:Synia:work)
+- **Language**: [English](https://synia.toolforge.org/#language/Q1860) - `#language/Q1860`
+  - Template: [Wikidata:Synia:language](https://www.wikidata.org/wiki/Wikidata:Synia:language)
+- **Country**: [Denmark](https://synia.toolforge.org/#country/Q35) - `#country/Q35`
+  - Template: [Wikidata:Synia:country](https://www.wikidata.org/wiki/Wikidata:Synia:country)
 
-View index pages for aspects:
-- `#author` - Browse authors index
-- `#venue` - Browse venues index
+### Index Pages
 
-### Two-Entity Views
+Browse collections of entities:
 
-Compare or relate two entities:
-- `#author/Q42/topic/Q42` - View an author's relationship to a topic
+- **Authors Index**: [Browse all authors](https://synia.toolforge.org/#author-index) - `#author-index`
+  - Template: [Wikidata:Synia:author-index](https://www.wikidata.org/wiki/Wikidata:Synia:author-index)
+- **Venues Index**: [Browse all venues](https://synia.toolforge.org/#venue-index) - `#venue-index`
+  - Template: [Wikidata:Synia:venue-index](https://www.wikidata.org/wiki/Wikidata:Synia:venue-index)
+- **Topics Index**: [Browse all topics](https://synia.toolforge.org/#topic-index) - `#topic-index`
+  - Template: [Wikidata:Synia:topic-index](https://www.wikidata.org/wiki/Wikidata:Synia:topic-index)
+
+### Two-Entity Relationship Views
+
+Explore connections between entities:
+
+- **Author-Topic**: [Douglas Adams & Artificial Intelligence](https://synia.toolforge.org/#author/Q42/topic/Q11660) - `#author/Q42/topic/Q11660`
+  - Template: [Wikidata:Synia:author-topic](https://www.wikidata.org/wiki/Wikidata:Synia:author-topic)
+- **Venue-Topic**: [Nature & Genetics](https://synia.toolforge.org/#venue/Q180445/topic/Q7162) - `#venue/Q180445/topic/Q7162`
+  - Template: [Wikidata:Synia:venue-topic](https://www.wikidata.org/wiki/Wikidata:Synia:venue-topic)
+- **Country-Topic**: [Denmark & Wind Power](https://synia.toolforge.org/#country/Q35/topic/Q42511) - `#country/Q35/topic/Q42511`
+  - Template: [Wikidata:Synia:country-topic](https://www.wikidata.org/wiki/Wikidata:Synia:country-topic)
 
 ## Architecture
 

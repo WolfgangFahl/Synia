@@ -232,20 +232,94 @@ let userLang = navigator.language || navigator.userLanguage;
 - Direct SPARQL endpoint access
 - Static file hosting sufficient
 
+## Template Gallery
+
+### Available Templates
+
+There are currently **173 Wikidata:Synia templates** organized into categories:
+
+**Template Statistics:**
+- **50 single-entity views** - View individual entities
+- **112 index pages** - Browse collections of entities  
+- **11 two-entity relationship views** - Explore connections
+
+[Browse all templates on Wikidata](https://www.wikidata.org/w/index.php?title=Special:PrefixIndex&prefix=Synia%3A&namespace=4)
+
+### Template Categories
+
+**Bibliometrics & Scientometrics:**
+- author, venue, work, publisher, topic
+- author-topic, venue-topic, publisher-topic
+- scientificevent, scientificeventseries
+
+**Linguistics & Lexicography:**
+- language, lexeme, lexicalcategory
+- language-lexeme-index, language-sense-index
+- hyphenation-index, grammaticalgender
+
+**Geography & Places:**
+- country, municipality, glacier
+- country-topic, country-author-index
+
+**Arts & Culture:**
+- artist, artwork, composer, gallery
+- exhibition, collection, typeface
+
+**Organizations & Institutions:**
+- organization, company, library
+- organization-organization, country-library-index
+
+### Template Naming Conventions
+
+**Single-entity views:**
+- Format: `{aspect}` (e.g., `author`, `venue`)
+- URL: `#author/Q42`
+- Shows all information about one entity
+
+**Index pages:**
+- Format: `{aspect}-index` (e.g., `author-index`)
+- URL: `#author-index`
+- Lists/browses multiple entities of that type
+
+**Two-entity relationships:**
+- Format: `{aspect1}-{aspect2}` (e.g., `author-topic`)
+- URL: `#author/Q42/topic/Q11660`
+- Shows relationship between two entities
+
+**Filtered indexes:**
+- Format: `{aspect1}-{aspect2}-index` (e.g., `country-author-index`)
+- URL: `#country/Q35/author-index`
+- Lists entities of type2 filtered by entity1
+
 ## Extension Points
 
 ### Adding New Views
+
+Before creating a new template, check if one already exists:
+1. [Browse existing templates](https://www.wikidata.org/w/index.php?title=Special:PrefixIndex&prefix=Synia%3A&namespace=4)
+2. Search for similar aspects
+
+To create a new template:
 1. Create new page at `Wikidata:Synia:{aspect-name}`
 2. Add headers and SPARQL blocks
 3. Navigate to `#aspect-name` or `#aspect-name/Q123`
 
+### Finding Entity Q-Numbers
+
+To use Synia, you need Wikidata Q-identifiers:
+- Search on [Wikidata.org](https://www.wikidata.org/)
+- Use the [Wikidata search API](https://www.wikidata.org/w/api.php)
+- Check existing Synia views for examples
+
 ### Custom Endpoints
+
 Templates can specify custom SPARQL endpoints:
 ```
 {{SPARQL|endpoint=https://custom.wikibase.cloud/query/sparql|query=...}}
 ```
 
 ### Adding New Visualizations
+
 Include `#defaultView:` directive in SPARQL:
 ```sparql
 #defaultView:Map
@@ -253,6 +327,8 @@ SELECT ?item ?itemLabel ?coord WHERE {
   ...
 }
 ```
+
+Supported views: Map, Timeline, Graph, BarChart, LineChart, ScatterChart, BubbleChart, TreeMap, Tree, Dimensions
 
 ## Dependencies
 
